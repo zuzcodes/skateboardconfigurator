@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Skateboard Configurator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Skateboard Configurator</h1>
+      <p>Select colors of your choice and add features.</p>
+      <div class="divider"></div>
+    </header>
+
+    <div id="configurator">
+      <div id="product-preview">
+        <div id="base" src="" class="base" data-feature="base"></div>
+        <img src="images/electric-selection.png" class="hide" data-feature="electric" />
+        <img src="images/print-selection.png" class="hide" data-feature="print" />
+        <img src="images/decor-selection.png" class="hide" data-feature="decor" />
+      </div>
+
+      <div id="features">
+        Features:
+        <figure class="feature" data-feature="electric">
+          <img src="images/feature_electric.png" alt="electric" />
+          <figcaption>Electric</figcaption>
+        </figure>
+        <figure class="feature" data-feature="print">
+          <img src="images/feature_print.png" alt="print" />
+          <figcaption>Print</figcaption>
+        </figure>
+        <figure class="feature" data-feature="decor">
+          <img src="images/feature_decor.png" alt="decoration" />
+          <figcaption>Decor</figcaption>
+        </figure>
+      </div>
+
+      <div id="swatches">
+        Colors:
+        <div id="swatch1" class="swatch" fill="rgb(199,168,202, 0.9)"></div>
+        <div id="swatch2" class="swatch" fill="rgb(97, 70, 158, 0.9)"></div>
+        <div id="swatch3" class="swatch" fill="rgb(207,235,253, 0.9)"></div>
+        <div id="swatch4" class="swatch" fill="rgb(156,221,166, 0.9)"></div>
+        <div id="swatch5" class="swatch" fill="rgb(202,163,122, 0.9)"></div>
+        <div id="swatch6" class="swatch" fill="rgb(254,184,126, 0.9)"></div>
+        <div id="swatch7" class="swatch" fill="rgb(215,97,92, 0.9)"></div>
+      </div>
+
+      <div id="selected">
+        Selected Features:
+        <ul>
+          <!-- featureElements are added here! -->
+        </ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

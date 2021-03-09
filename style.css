@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  margin: 10%;
+}
+
+header {
+  text-align: center;
+  color: rgb(86, 87, 87);
+  padding: 5%;
+}
+
+.divider {
+    width: 15em;
+    height: 0.1em;
+    background-color: rgb(248, 198, 162);
+    border-radius: 1em;
+    margin: auto;
+    margin-bottom: 10%;
+}
+
+#configurator {
+  display: grid;
+  grid-template-areas:
+    "product product"
+    "swatches features"
+    "selected selected";
+  gap: 1em;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#product-preview {
+  grid-area: product;
+  min-width: 25em;
+  max-width: 25em;
+  box-shadow: 4px 4px 10px rgb(248, 198, 162);
+  border-radius: 1em;
+  position: relative;
+  transition: opacity ease-in 0.5s;
+}
+
+#product-preview svg {
+  position: relative;
+  width: 100%;
+  height: auto;
+  fill: rgb(94, 84, 59, 0.7);
+}
+
+#product-preview img {
+  position: absolute;
+  width: 10%;
+  left: 45.3%;
+}
+
+#product-preview img[data-feature="electric"] {
+  top: 25%;
+}
+
+#product-preview img[data-feature="print"] {
+  top: 50%;
+}
+
+#product-preview img[data-feature="decor"] {
+  width: 6%;
+  left: 47%;
+  top: 80%;
+}
+
+#product-preview .hide {
+  opacity: 0;
+}
+
+#product-preview img.base {
+  position: relative;
+}
+
+#swatches {
+  grid-area: swatches;
+  max-width: 9em;
+  min-width: 9em;
+  height: 25.5em;
+  box-shadow: 4px 4px 10px rgb(248, 198, 162);
+  border-radius: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.swatch {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 0.5em;
+  margin: 3%;
+  cursor: pointer;
+}
+
+#swatch1 {
+  background-color: rgb(199,168,202);
+}
+#swatch2 {
+  background-color: rgb(97, 70, 158);
+}
+#swatch3 {
+  background-color: rgb(207,235,253);
+}
+#swatch4 {
+  background-color: rgb(156,221,166);
+}
+#swatch5 {
+  background-color: rgb(202,163,122);
+}
+#swatch6 {
+  background-color: rgb(254,184,126);
+}
+#swatch7 {
+  background-color: rgb(215,97,92);
+}
+
+#features {
+  grid-area: features;
+  max-width: 15em;
+  min-width: 15em;
+  height: 25.5em;
+  box-shadow: 4px 4px 10px rgb(248, 198, 162);
+  border-radius: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#features .feature {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+
+#features .feature:hover {
+  cursor: pointer;
+}
+
+#features .feature.chosen {
+  color: rgb(248, 198, 162);
+}
+
+#features .feature img {
+  width: 5em;
+  height: auto;
+}
+
+#features .feature figcaption {
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+#selected {
+  grid-area: selected;
+}
+
+#selected ul {
+  list-style-type: none;
+}
+
+#selected ul li {
+  display: inline-block;
+}
+
+#selected ul li img {
+  width: 4em;
+}
+
+.animate-feature-in {
+  --diffX: 0;
+  --diffY: 0;
+  animation: feature-in 1s;
+}
+
+@keyframes feature-in {
+  0% {
+    transform: translate(calc(var(--diffX) * 1px), calc(var(--diffY) * 1px));
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.animate-feature-out {
+  --diffX: 0;
+  --diffY: 0;
+  animation: feature-out 1s;
+}
+
+@keyframes feature-out {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(var(--diffX) * 1px), calc(var(--diffY) * 1px));
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  body{
+    margin: auto;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  header {
+    padding: 5% 0 0 0;
+  }
+  
+  .divider {
+    margin: auto;
+    margin-bottom: 4%;
+  }
+
+  #configurator {
+    grid-template-areas:
+      "product swatches features"
+      "selected selected selected";
+    
+      justify-content: space-evenly;
+      align-items: center;
+  }
+}
