@@ -56,7 +56,10 @@ function selected() {
 
 function mouseOver() {
   console.log(this);
-  this.style.stroke = "white";
+  this.style.stroke = "lightgrey";
+    this.style.strokeWidth = "10px";
+    this.style.cursor = "pointer";
+
 }
 
 function mouseOut() {
