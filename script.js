@@ -1,14 +1,5 @@
 "use strict";
 
-// MODEL
-const Features = {
-  drinksholder: false,
-  led: false,
-  propeller: false,
-  shield: false,
-  solarfan: false,
-};
-
 let elementToPaint;
 
 // ------ START ------
